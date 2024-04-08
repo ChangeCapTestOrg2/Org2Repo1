@@ -1,0 +1,13 @@
+name: Dummy Status Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  dummy_check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Dummy Check
+      run: echo "Dummy Status Check Passed!"
