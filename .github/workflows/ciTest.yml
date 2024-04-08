@@ -2,12 +2,13 @@ name: Dummy Status Check
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    branches:
+      - main  # or specify the branches you want to protect
 
 jobs:
-  dummy_check:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Dummy Check
-      run: echo "Dummy Status Check Passed!"
+      - name: Dummy Check
+        run: echo "Dummy status check passed."
