@@ -1,0 +1,14 @@
+name: Dummy Status Check
+
+on:
+  pull_request:
+    branches:
+      - main  # or specify the branches you want to protect
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dummy Check
+        run: echo "Dummy status check passed."
